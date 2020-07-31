@@ -15,10 +15,10 @@
     "react-router-dom": "^5.2.0",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
-    "webpack-merge": "^5.0.9"
+    "webpack-merge": "^5.0.9",
+    "html-webpack-plugin": "^4.3.0"
   },
   "devDependencies": {
-    "html-webpack-plugin": "^4.3.0",
     "@babel/core": "^7.11.0",
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
