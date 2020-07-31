@@ -14,4 +14,13 @@ module.exports = merge(common, {
       },
     },
   },
+  module: {
+    rules: [
+      {
+        test: /\.tsx$/,
+        use: "ts-loader",
+        exclude: /node_modules/,
+      },
+    ],
+  },
 });
