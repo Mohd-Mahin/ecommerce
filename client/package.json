@@ -7,6 +7,7 @@
     "build": "webpack --mode production"
   },
   "license": "MIT",
+  "proxy": "http://localhost:14000",
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

@@ -7,13 +7,18 @@ module.exports = {
     path: path.join(__dirname, "dist"),
     filename: "bundle.js",
   },
-  devtool: "inline-source-map",
+  devServer: {
+    compress: true,
+    port: 3000,
+    proxy: {
+      "/api": {
+        target: "http://localhost:14000",
+        changeOrigin: true,
+      },
+    },
+  },
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
-  },
-  devServer: {
-    inline: false,
-    contentBase: "./dist",
   },
   module: {
     rules: [

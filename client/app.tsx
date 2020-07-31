@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 export default function App() {
-  return <div>Welcome to world of react app</div>;
+  useEffect(() => {
+    fetch("/api/shop").then((res) => console.log(res));
+  });
+  return <div>Welcome to the world of React</div>;
 }
