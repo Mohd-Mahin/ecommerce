@@ -7,7 +7,7 @@
     "build": "webpack --config webpack.prod.js"
   },
   "engines": {
-    "node": "12.16.2"
+    "node": "12.0.0"
   },
   "license": "MIT",
   "proxy": "http://localhost:14000",
