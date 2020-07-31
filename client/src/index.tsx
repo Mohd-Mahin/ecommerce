@@ -9,9 +9,10 @@ function Routes() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/home-page" component={App} />
-        <Route exact path="/products" component={Product} />
+        <Route exact path="/" component={App} />
+        <Route exact path="/product" component={Product} />
         <Route exact path="/order" component={Order} />
+        <Route exact path="*" component={() => <h2>Not Found...</h2>} />
       </Switch>
     </Router>
   );

@@ -1,5 +1,11 @@
 import React from "react";
+import { Navbar } from "./components/navbar";
 
 export function Order() {
-  return <div>Order</div>;
+  return (
+    <div>
+      <Navbar />
+      Order
+    </div>
+  );
 }
