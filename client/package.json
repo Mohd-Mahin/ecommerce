@@ -6,6 +6,9 @@
     "dev": "webpack-dev-server --hot --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js"
   },
+  "engines": {
+    "node": "12.16.2"
+  },
   "license": "MIT",
   "proxy": "http://localhost:14000",
   "dependencies": {
