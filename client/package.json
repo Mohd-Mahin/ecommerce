@@ -9,6 +9,7 @@
   "license": "MIT",
   "proxy": "http://localhost:14000",
   "dependencies": {
+    "common-cmp": "https://github.com/Mohd-Mahin/common-cmp.git#v1.0.9",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0"
@@ -17,6 +18,9 @@
     "@babel/core": "^7.11.0",
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
+    "@styled-system/should-forward-prop": "^5.1.5",
     "@types/html-webpack-plugin": "^3.2.3",
     "@types/react": "^16.9.43",
     "@types/react-dom": "^16.9.8",
@@ -26,6 +30,7 @@
     "cpx": "^1.5.0",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
+    "styled-system": "^5.1.5",
     "ts-loader": "^8.0.1",
     "typescript": "^3.9.7",
     "webpack": "^4.44.1",

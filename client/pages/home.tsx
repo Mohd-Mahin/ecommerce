@@ -1,11 +1,12 @@
-import React, { useEffect } from "react";
+import React from "react";
+import { Box } from "common-cmp";
 import { Navbar } from "../component/navbar";
 
 export function Home() {
   return (
-    <div>
+    <Box bg="#212">
       <Navbar />
       Welcome to the world of React
-    </div>
+    </Box>
   );
 }
