@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 14000;
 async function main() {
   const server = express()
     .use(express.json())
-    .use(express.static(path.join(__dirname, "..", "client", "dist")))
+    .use(express.static(path.join(__dirname, "..", "..", "client", "dist")))
     .use("/api", getApiRouter())
     .use(notFound)
     .listen(PORT, () =>
