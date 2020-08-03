@@ -1,7 +1,7 @@
 import express from "express";
-import { getApiRouter } from "./api-router";
+import { getApiRouter } from "./server/controller/api-router";
 import path from "path";
-import { notFound } from "./utils/helper-func";
+import { notFound } from "./server/utils/helper-func";
 
 const PORT = process.env.PORT || 14000;
 
