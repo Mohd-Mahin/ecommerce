@@ -1,19 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { Box } from "common-cmp";
 import { Navbar } from "../component/navbar";
 import { instance } from "../component/axios";
-import { Box } from "common-cmp";
-import { AxiosResponse } from "axios";
 
 export function Home() {
-  const [shopData, setShopData] = useState<null | { title: string }[]>(null);
-  useEffect(() => {
-    instance.get("/shop").then((res: AxiosResponse) => setShopData(res.data));
-  }, []);
+  instance.get("/shop").then((res) => console.log(res));
   return (
     <Box>
       <Navbar />
-      <Box fontSize={4}>Home Page</Box>
-      <code>{JSON.stringify(shopData)}</code>
+      Welcome to the world of React
     </Box>
   );
 }
