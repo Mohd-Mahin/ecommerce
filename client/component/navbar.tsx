@@ -18,9 +18,6 @@ export function Navbar() {
       <Box m={3}>
         <Link to="/product">Product</Link>
       </Box>
-      <Box m={3}>
-        <Link to="/order">Order</Link>
-      </Box>
     </Root>
   );
 }
