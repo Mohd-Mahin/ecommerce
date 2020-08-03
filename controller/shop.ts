@@ -1,6 +1,5 @@
 import express, { Request, Response } from "express";
-
-const product = [];
+import { Product } from "../models/product";
 
 export function getShopRouter() {
   return express
@@ -10,11 +9,11 @@ export function getShopRouter() {
 }
 
 function getIndexProducts(req, res: Response) {
-  res.send(product);
+  res.send(Product.fetchAll());
 }
 
 function postAddProduct(req: Request, res: Response) {
   const { prodName } = req.body;
-  product.push({ title: prodName, shop: "Online" });
+  new Product(prodName).save();
   res.send("saved");
 }
