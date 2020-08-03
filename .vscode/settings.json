@@ -6,9 +6,6 @@
     "**/.svn": true,
     "**/.hg": true,
     "**/CVS": true,
-    "**/.DS_Store": true,
-    "**/node_modules": true,
-    "**/dist": true,
-    "**/yarn*": true
+    "**/.DS_Store": true
   }
 }
