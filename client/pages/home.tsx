@@ -4,7 +4,7 @@ import { Navbar } from "../component/navbar";
 
 export function Home() {
   return (
-    <Box bg="#212">
+    <Box>
       <Navbar />
       Welcome to the world of React
     </Box>

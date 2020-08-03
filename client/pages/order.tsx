@@ -1,12 +1,12 @@
 import React from "react";
-import { Flex } from "common-cmp";
+import { Flex, Box } from "common-cmp";
 import { Navbar } from "../component/navbar";
 
 export function Order() {
   return (
-    <Flex>
+    <Box>
       <Navbar />
       Order
-    </Flex>
+    </Box>
   );
 }
