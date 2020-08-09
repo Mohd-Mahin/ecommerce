@@ -5,7 +5,7 @@ import { nanoid } from "nanoid";
 export function adminRouter() {
   return express
     .Router({ mergeParams: true })
-    .get("/product-list", getProducts)
+    .get("/product", getProducts)
     .post("/add-product", postAddProduct)
     .post("/edit-product", postEditProduct)
     .post("/delete/:prodId", postDeleteProduct);
