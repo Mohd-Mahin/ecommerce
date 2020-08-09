@@ -48,6 +48,11 @@ export function withNabar(Wrapper: React.FunctionComponent) {
               Add-Product
             </Link>
           </Box>
+          <Box p={3}>
+            <Link exact activeStyle={{ fontWeight: 700 }} to="/admin/products">
+              Admin Products
+            </Link>
+          </Box>
         </Flex>
         <Flex
           flexDirection="column"

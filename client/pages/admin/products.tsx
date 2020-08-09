@@ -7,12 +7,32 @@ import { AxiosResponse } from "axios";
 import { Theme } from "../../component/context/theme";
 import { Spacer } from "common-cmp";
 import { FlexWrap } from "common-cmp";
+import { Flex } from "common-cmp";
 
 const Root = styled(Box)({});
 const ProductCard = styled(Box)({
   borderRadius: 5,
   boxSizing: "border-box",
 });
+const Button = styled.button(
+  {
+    width: 90,
+    height: 30,
+    borderRadius: 5,
+    outline: "inherit",
+    "&:hover": {
+      background: "#fff",
+    },
+    "&:focus": {
+      background: "#fff",
+    },
+  },
+  (props) => ({
+    marginRight: props.mr || 0,
+    border: `2px solid ${props.border}`,
+    color: props.border,
+  })
+);
 
 interface IProducts {
   name: string;
@@ -31,6 +51,10 @@ function Products() {
       .then((res: AxiosResponse<IProducts[]>) => setProducts(res));
   }, []);
 
+  const onEdit = () => {};
+
+  const onDelete = () => {};
+
   const renderProducts = () =>
     products.data.map((product, index) => (
       <ProductCard
@@ -46,6 +70,15 @@ function Products() {
         </Box>
         <Box color={theme.card.font}>{product.description}</Box>
         <Box color={theme.card.font}>{product.price}</Box>
+        <Spacer mb={3} />
+        <Flex flex={1} justifyContent="center">
+          <Button mr={15} border={theme.dark} onClick={onEdit}>
+            Edit
+          </Button>
+          <Button border="#BD0D0D" onClick={onDelete}>
+            Delete
+          </Button>
+        </Flex>
       </ProductCard>
     ));
 

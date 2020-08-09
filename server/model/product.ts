@@ -13,11 +13,13 @@ const fPath = path.join(
 );
 
 export default class Product {
+  id: string;
   name: string;
   description: string;
   price: number;
 
-  constructor(name: string, description: string, price: number) {
+  constructor(id: string, name: string, description: string, price: number) {
+    this.id = id;
     this.name = name;
     this.description = description;
     this.price = price;
@@ -27,8 +29,6 @@ export default class Product {
     let products = [];
     const fileContent = await readFileAsync(fPath, { encoding: "utf8" });
     if (fileContent.length) products = JSON.parse(fileContent);
-
-    console.log(this);
     products.push(this);
     try {
       await writeFileAsync(fPath, JSON.stringify(products), "utf8");

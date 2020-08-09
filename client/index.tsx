@@ -6,6 +6,7 @@ import Home from "./pages/shop/home";
 import Products from "./pages/shop/products";
 import Order from "./pages/shop/order";
 import { Theme } from "./component/context/theme";
+import AdminProducts from "./pages/admin/products";
 
 const theme = {
   light: "#EFF6F2",
@@ -34,6 +35,9 @@ function Routes() {
           </Route>
           <Route exact path="/admin/add-product">
             <AddProduct />
+          </Route>
+          <Route exact path="/admin/products">
+            <AdminProducts />
           </Route>
           <Route exact path="*" component={() => <h2>Not Found...</h2>} />
         </Switch>
