@@ -6,8 +6,10 @@
     "moduleResolution": "node",
     "sourceMap": true,
     "outDir": "dist",
-    "lib": ["es2015"]
+    "lib": ["es2015"],
+    "allowJs": true,
+    "resolveJsonModule": true
   },
-  "include": ["**/*.ts"],
+  "include": ["**/*.ts", "server/**/*.json"],
   "exclude": ["node_modules", ".vscode", "client"]
 }
