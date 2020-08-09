@@ -1,20 +1,25 @@
 import express, { Request, Response } from "express";
+import Product from "../model/product";
 
-const product = [];
-
-export function getShopRouter() {
+export function shopRouter() {
   return express
     .Router({ mergeParams: true })
-    .get("/", getIndexProducts)
-    .post("/add-product", postAddProduct);
+    .get("/", getHomePage)
+    .get("/products", getProducts)
+    .get("/cart", getCart)
+    .get("/orders", getOrders);
 }
 
-function getIndexProducts(req, res: Response) {
-  res.send(product);
+async function getProducts(req, res: Response) {
+  const products = await Product.fetchAll();
+  res.send(products);
 }
 
-function postAddProduct(req: Request, res: Response) {
-  const { prodName } = req.body;
-  product.push({ title: prodName, shop: "Online" });
-  res.send("saved");
+async function getHomePage(req: Request, res: Response) {
+  const products = await Product.fetchAll();
+  res.send(products);
 }
+
+function getCart() {}
+
+function getOrders() {}

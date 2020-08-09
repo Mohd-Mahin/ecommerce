@@ -1,5 +1,7 @@
-import axios from "axios";
+import axios, { AxiosInstance } from "axios";
 
-export const instance = axios.create({
+const ajaxUtis = axios.create({
   baseURL: "/api",
 });
+
+export { ajaxUtis };
