@@ -4,7 +4,6 @@ import { withNabar } from "../../component/hoc/withNavbar";
 import { ajaxUtis } from "../../component/axios";
 import styled from "@emotion/styled";
 import { useRouter } from "../../component/context/router";
-// import { useHistory } from "react-router-dom";
 
 const Root = styled(Flex)({
   flex: 1,
