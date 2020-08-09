@@ -7,7 +7,8 @@ export function adminRouter() {
     .Router({ mergeParams: true })
     .get("/product-list", getProducts)
     .post("/add-product", postAddProduct)
-    .post("/edit-product", postEditProduct);
+    .post("/edit-product", postEditProduct)
+    .post("/delete/:prodId", postDeleteProduct);
 }
 
 async function getProducts(req, res: Response) {
@@ -28,3 +29,9 @@ async function postAddProduct(req: Request, res: Response) {
 }
 
 function postEditProduct() {}
+
+async function postDeleteProduct(req: Request, res: Response) {
+  const { prodId } = req.params;
+  console.log(prodId);
+  res.end();
+}

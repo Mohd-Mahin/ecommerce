@@ -35,6 +35,7 @@ const Button = styled.button(
 );
 
 interface IProducts {
+  id: string;
   name: string;
   description: string;
   price: number;
@@ -53,7 +54,9 @@ function Products() {
 
   const onEdit = () => {};
 
-  const onDelete = () => {};
+  const onDelete = (id: string) => {
+    ajaxUtis.post(`/product/delete/${id}`);
+  };
 
   const renderProducts = () =>
     products.data.map((product, index) => (
@@ -75,7 +78,7 @@ function Products() {
           <Button mr={15} border={theme.dark} onClick={onEdit}>
             Edit
           </Button>
-          <Button border="#BD0D0D" onClick={onDelete}>
+          <Button border="#BD0D0D" onClick={() => onDelete(product.id)}>
             Delete
           </Button>
         </Flex>
