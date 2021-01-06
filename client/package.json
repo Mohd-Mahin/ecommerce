@@ -9,7 +9,7 @@
   "license": "MIT",
   "proxy": "http://localhost:14000",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "common-cmp": "https://github.com/Mohd-Mahin/common-cmp.git#v1.0.9",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
